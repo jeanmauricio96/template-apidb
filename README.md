@@ -1,4 +1,4 @@
-## :desktop_computer Como executar a API
+## :desktop_computer: Como executar a API
 
 **Preparar o ambiente**
 
