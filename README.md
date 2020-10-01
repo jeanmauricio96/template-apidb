@@ -1,10 +1,27 @@
-desktop_computer Como executar a API
-Preparar o ambiente
+## :desktop_computer Como executar a API
 
-Clonar repositório git clone https://github.com/jeanmauricio96/template-apidb
+**Preparar o ambiente**
 
-Abrir repositório no Vs Code (ou editor de sua preferência)
+-Clonar repositório git clone `https://github.com/jeanmauricio96/template-apidb`
 
-No terminal > rodar o comando yarn
+-Abrir repositório no `Vs Code` (ou editor de sua preferência)
 
-No terminal > rodar o comando yarn dev
+-No terminal > rodar o comando `yarn`
+
+-No terminal > rodar o comando `yarn dev`
+
+**Configurar rotas no Insommnia/Postman**
+
+**Create**
+
+- Criar rota `POST` com `base_url` + `/users`
+
+**Login**
+
+- Criar rota `POST` com `base_url` + `/login`
+
+**Update**
+
+- Criar rota `POST` com `base_url` + `/users`
+
+- Criar rota `PUT` com `base_url` + `/users`
