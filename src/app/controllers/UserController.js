@@ -3,6 +3,17 @@ import * as Yup from 'yup';
 import User from '../models/User';
 
 class UserController {
+  async index(req, res) {
+    try {
+      const users = await User.findAll({
+        attributes: ['id', 'name', 'email'],
+      });
+      return res.json(users);
+    } catch (error) {
+      return res.json(error);
+    }
+  }
+
   async store(req, res) {
     try {
       const schema = Yup.object().shape({
@@ -80,6 +91,22 @@ class UserController {
         name,
         email,
       });
+    } catch (error) {
+      return res.json(error);
+    }
+  }
+
+  async delete(req, res) {
+    try {
+      const user = await User.findByPk(req.params.id);
+
+      if (!user) {
+        return res.status(404).json({ error: 'User does not exist' });
+      }
+
+      await user.destroy();
+
+      return res.status(204).send();
     } catch (error) {
       return res.json(error);
     }

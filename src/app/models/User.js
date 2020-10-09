@@ -29,6 +29,13 @@ class User extends Model {
     return this;
   }
 
+  static associate(models) {
+    this.hasMany(models.Scrap, {
+      as: 'Scraps',
+      foreignKey: 'user_id',
+    });
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
   }
