@@ -36,7 +36,7 @@ module.exports = {
     });
   },
 
-  // down: async (queryInterface) => {
-  // await queryInterface.dropTable('scraps');
-  // },
+  down: async (queryInterface) => {
+    await queryInterface.dropTable('scraps');
+  },
 };

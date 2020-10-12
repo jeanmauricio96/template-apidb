@@ -4,6 +4,8 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node ./dist/server.js",
     "dev": "nodemon",
     "dev:debug": "nodemon --inspect src/server.js"
   },
